@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>疑似言語トレーサーbeta2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+
+        th,
+        td {
+            border: 1px solid #888;
+            padding: 2px 8px;
+            font-family: monospace;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        .changed {
+            background: #ffe9a8;
+            font-weight: bold;
+        }
+
+        #error {
+            color: #c00;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>G-TRACER</h1>
+
+    <h3>プログラム</h3>
+    <textarea id="source" rows="15" cols="60"></textarea>
+
+    <h3>初期値(任意)</h3>
+    <textarea id="initial" rows="4" cols="60" placeholder="例:&#10;n ← 4&#10;a ← {5, 3, 8, 1}"></textarea>
+    <br>
+    <label>÷ の扱い:
+        <select id="divMode">
+            <option value="int">整数同士は商(整数)</option>
+            <option value="real">常に実数</option>
+        </select>
+    </label>
+    <br>
+    <button id="runBtn">実行</button>
+    <button id="pyBtn">Pythonに変換</button>
+
+    <div id="error"></div>
+    <pre id="code"></pre>
+    <div id="trace"></div>
+
+    <script src="parser.js"></script>
+    <script src="interpreter.js"></script>
+    <script src="codegen.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
