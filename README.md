@@ -18,4 +18,4 @@
 
 ### 制作環境・検証環境
 - Visual Studio Code
-- Windows11 / Google Chrome 156.0.8078.80
+- Windows11(26H2) / Google Chrome 156.0.8078.80
